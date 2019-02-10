@@ -1,6 +1,6 @@
 package me.camdenorrb.kcommons.store.struct
 
-import me.camdenorrb.kcommons.types.ModuleStruct
+import me.camdenorrb.kcommons.base.ModuleStruct
 
 abstract class Store<C, K> : ModuleStruct() {
 

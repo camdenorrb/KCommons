@@ -1,4 +1,4 @@
-package me.camdenorrb.kcommons.types
+package me.camdenorrb.kcommons.base
 
 interface IModule : Named {
 
