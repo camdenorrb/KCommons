@@ -10,7 +10,8 @@ interface IModule : Named {
 
 abstract class ModuleStruct : IModule {
 
-	@Transient var isEnabled = false
+	@Transient @Volatile
+	var isEnabled = false
 		private set
 
 
