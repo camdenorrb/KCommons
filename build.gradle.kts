@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "me.camdenorrb"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -19,4 +19,5 @@ dependencies {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.freeCompilerArgs = listOf("-Xjvm-default=compatibility")
 }

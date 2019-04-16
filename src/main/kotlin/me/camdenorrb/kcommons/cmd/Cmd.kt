@@ -2,12 +2,30 @@ package me.camdenorrb.kcommons.cmd
 
 interface Cmd<C : CmdContext> {
 
-    fun C.execute()
+    fun execute(context: C)
 
-    fun C.onCantExecute()
+    fun onCantExecute(context: C)
 
-    fun C.canExecute(): Boolean
+    fun canExecute(context: C): Boolean
 
     fun isThis(cmd: String): Boolean
+
+
+    /**
+     * Handles the execution process for you
+     *
+     * @return If they were able to execute the command
+     */
+    @JvmDefault
+    fun executeWithChecks(context: C): Boolean {
+
+        if (!canExecute(context)) {
+            onCantExecute(context)
+            return false
+        }
+
+        execute(context)
+        return true
+    }
 
 }
