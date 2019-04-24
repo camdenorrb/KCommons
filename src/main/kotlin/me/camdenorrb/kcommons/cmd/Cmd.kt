@@ -2,7 +2,7 @@ package me.camdenorrb.kcommons.cmd
 
 interface Cmd<C : CmdContext> {
 
-    fun execute(context: C)
+    fun C.execute()
 
     fun onCantExecute(context: C)
 
@@ -24,7 +24,7 @@ interface Cmd<C : CmdContext> {
             return false
         }
 
-        execute(context)
+        context.execute()
         return true
     }
 
