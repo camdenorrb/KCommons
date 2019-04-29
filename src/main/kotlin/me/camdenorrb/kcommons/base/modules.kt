@@ -1,6 +1,6 @@
 package me.camdenorrb.kcommons.base
 
-interface IModule : Named {
+interface ModuleBase : Named {
 
 	fun enable() = Unit
 
@@ -8,7 +8,7 @@ interface IModule : Named {
 
 }
 
-abstract class ModuleStruct : IModule {
+abstract class ModuleStruct : ModuleBase {
 
 	@Transient @Volatile
 	var isEnabled = false
