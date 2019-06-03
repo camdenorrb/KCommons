@@ -18,7 +18,7 @@ open class EnumProgression<T : Enum<T>>(val enumClazz: Class<T>, val start: T, v
 
 
         override fun hasNext(): Boolean {
-            return current + 1 <= lastIndex
+            return current <= lastIndex
         }
 
         override fun next(): T {
