@@ -1,3 +1,6 @@
+# Ignore test class
+src/main/kotlin/me/camdenorrb/kcommons/test.kt
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Kotlin template
 # Compiled class file
