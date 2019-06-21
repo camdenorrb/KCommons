@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     maven
-    kotlin("jvm") version "1.3.31"
+    kotlin("jvm") version "1.3.40"
 }
 
 group = "me.camdenorrb"
@@ -13,7 +13,10 @@ repositories {
 }
 
 dependencies {
+
     compileOnly(kotlin("stdlib"))
+    compileOnly(kotlin("reflect"))
+
     implementation("com.google.guava:guava:+")
 }
 
