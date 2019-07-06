@@ -37,6 +37,14 @@ sealed class FileFilter : java.io.FileFilter {
 
     }
 
+    object Korm : FileFilter() {
+
+        override fun accept(file: File): Boolean {
+            return file.extension.equals("korm", true)
+        }
+
+    }
+
 
     companion object {
 

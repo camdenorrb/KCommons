@@ -6,10 +6,9 @@ import kotlin.reflect.full.isSuperclassOf
 import kotlin.reflect.full.withNullability
 import kotlin.reflect.jvm.jvmErasure
 
-
 fun KType.isGenericSubtypeOf(type: KType): Boolean {
 
-    if (!this.jvmErasure.isSubclassOf(type.jvmErasure)) return false
+    if (arguments.size != type.arguments.size || !this.jvmErasure.isSubclassOf(type.jvmErasure)) return false
 
     return arguments.zip(type.arguments).all { (first, second) ->
 
@@ -22,7 +21,7 @@ fun KType.isGenericSubtypeOf(type: KType): Boolean {
 
 fun KType.isGenericSupertypeOf(type: KType): Boolean {
 
-    if (!this.jvmErasure.isSuperclassOf(type.jvmErasure)) return false
+    if (arguments.size != type.arguments.size || !this.jvmErasure.isSuperclassOf(type.jvmErasure)) return false
 
     return arguments.zip(type.arguments).all { (first, second) ->
 

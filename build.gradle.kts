@@ -2,11 +2,11 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     maven
-    kotlin("jvm") version "1.3.40"
+    kotlin("jvm") version "1.3.41"
 }
 
 group = "me.camdenorrb"
-version = "1.0.4"
+version = "1.0.5"
 
 repositories {
     mavenCentral()
@@ -14,10 +14,20 @@ repositories {
 
 dependencies {
 
+    // Runtime
+
     compileOnly(kotlin("stdlib"))
     compileOnly(kotlin("reflect"))
 
     implementation("com.google.guava:guava:+")
+
+
+    // Test
+
+    testImplementation(kotlin("test-junit"))
+
+    testImplementation(kotlin("stdlib"))
+    testImplementation(kotlin("reflect"))
 }
 
 tasks.withType<KotlinCompile> {
