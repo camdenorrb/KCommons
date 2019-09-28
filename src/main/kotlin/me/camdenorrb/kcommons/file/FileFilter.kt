@@ -37,7 +37,7 @@ sealed class FileFilter : java.io.FileFilter {
 
     }
 
-    object Korm : FileFilter() {
+    object KORM : FileFilter() {
 
         override fun accept(file: File): Boolean {
             return file.extension.equals("korm", true)
@@ -48,7 +48,7 @@ sealed class FileFilter : java.io.FileFilter {
 
     companion object {
 
-        val filters = listOf(DIR, JAR, YAML, JSON)
+        val filters = listOf(DIR, JAR, YAML, JSON, KORM)
 
     }
 
