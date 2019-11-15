@@ -1,6 +1,6 @@
 package me.camdenorrb.kcommons.cmd
 
-interface Cmd<C : CmdContext> {
+interface Command<C : CommandContext> {
 
     fun C.execute()
 
