@@ -4,9 +4,9 @@ interface Cmd<C : CmdContext> {
 
     fun C.execute()
 
-    fun onCantExecute(context: C)
+    fun C.onCantExecute()
 
-    fun canExecute(context: C): Boolean
+    fun C.canExecute(): Boolean
 
     fun isThis(cmd: String): Boolean
 
@@ -19,8 +19,8 @@ interface Cmd<C : CmdContext> {
     @JvmDefault
     fun executeWithChecks(context: C): Boolean {
 
-        if (!canExecute(context)) {
-            onCantExecute(context)
+        if (!context.canExecute()) {
+            context.onCantExecute()
             return false
         }
 
