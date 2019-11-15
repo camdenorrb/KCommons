@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "me.camdenorrb"
-version = "1.0.8"
+version = "1.0.9"
 
 repositories {
     mavenCentral()
@@ -19,8 +19,8 @@ dependencies {
     compileOnly(kotlin("stdlib"))
     compileOnly(kotlin("reflect"))
 
-    implementation("com.google.guava:guava:+")
-
+    compile("com.google.guava:guava:+")
+    compile("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
 
     // Test
 
