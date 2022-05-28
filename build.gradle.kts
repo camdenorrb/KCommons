@@ -21,11 +21,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
 
     // Test
-
     testImplementation(kotlin("test-junit"))
-
-    testImplementation(kotlin("stdlib-jdk8"))
-    testImplementation(kotlin("reflect"))
 }
 
 tasks {
