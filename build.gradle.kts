@@ -30,14 +30,9 @@ dependencies {
 
 tasks {
     compileKotlin {
-        kotlinOptions.jvmTarget = "1.8"
         kotlinOptions.freeCompilerArgs = listOf("-Xjvm-default=compatibility")
     }
     compileTestKotlin {
-        kotlinOptions.jvmTarget = "1.8"
         kotlinOptions.freeCompilerArgs = listOf("-Xjvm-default=compatibility")
-    }
-    wrapper {
-        gradleVersion = "6.7"
     }
 }
