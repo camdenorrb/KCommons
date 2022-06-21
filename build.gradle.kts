@@ -18,7 +18,7 @@ dependencies {
     compileOnly(kotlin("reflect"))
 
     //compile("com.google.guava:guava:+")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
 
     // Test
     testImplementation(kotlin("test-junit"))
